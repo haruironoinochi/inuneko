@@ -57,9 +57,11 @@ class Rensa {
  }
  
  static setZeroRensa() {
-  this.rensa = 0;
-  // 表示の初期化
-  this.showRensa(-1);
+  if(this.rensa != 0){
+   this.rensa = 0;
+   // 表示の初期化
+   this.showRensa(-1);
+  }
  }
 }; // End of class Rensa
 
