@@ -58,7 +58,7 @@ function loop() {
   Score.calculateScore(combinationCount, eraseInfo.piece, eraseInfo.color);
   // 連鎖を計算する
   //Rensa.showrensa(rensaCount);
-  Rensa.addCound();
+  Rensa.addRensa();
   Stage.hideZenkeshi();
   } else {
   if(Stage.puyoCount === 0 && combinationCount > 0) {
