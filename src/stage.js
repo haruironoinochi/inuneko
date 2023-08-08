@@ -1,6 +1,7 @@
 class Stage {
  // static stageElement;
  // static scoreElement;
+ // static rensaElement;
  // static zenkeshiImage;
  // static board;
  // static puyoCount;
@@ -21,12 +22,23 @@ class Stage {
  zenkeshiImage.style.display = 'none'; 
  this.zenkeshiImage = zenkeshiImage;
  stageElement.appendChild(zenkeshiImage);
+
+  
  const scoreElement = document.getElementById("score");
  scoreElement.style.backgroundColor = Config.scoreBackgroundColor;
  scoreElement.style.top = Config.puyoImgHeight * Config.stageRows + 'px';
  scoreElement.style.width = Config.puyoImgWidth * Config.stageCols + 'px';
  scoreElement.style.height = Config.fontHeight + "px";
  this.scoreElement = scoreElement;
+
+   const rensaElement = document.getElementById("rensa");
+ rensaElement.style.backgroundColor = Config.rensaBackgroundColor;
+ rensaElement.style.top = Config.puyoImgHeight * Config.stageRows + 'px';
+ rensaElement.style.width = Config.puyoImgWidth * Config.stageCols + 'px';
+ rensaElement.style.height = Config.fontHeight + "px";
+ this.rensaElement = rensaElement;
+
+  
  // メモリを準備する
  this.board = [
  [0, 0, 0, 0, 0, 0],
