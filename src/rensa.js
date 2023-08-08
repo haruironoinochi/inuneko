@@ -35,7 +35,7 @@ class Rensa {
  rensa = Math.floor(rensa / 10);
  }
  }
- static calculateScore (rensa, piece, color) {
+ static calculateRensa (rensa, piece, color) {
  rensa = Math.min(rensa, Rensa.rensaBonus.length - 1);
  piece = Math.min(piece, Rensa.pieceBonus.length - 1);
  color = Math.min(color, Rensa.colorBonus.length - 1);
