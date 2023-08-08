@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
 let mode; // ゲームの現在の状況
 let frame; // ゲームの現在フレーム（1/60秒ごとに1追加される）
 let combinationCount = 0; // 何連鎖かどうか
+let rensaCount = 0; 
 function initialize() {
  // 画像を準備する
  PuyoImage.initialize();
@@ -51,7 +52,8 @@ function loop() {
   if(eraseInfo) {
   mode = 'erasing';
   combinationCount++;
-   console.log(comminationCount);
+   rensaCount++;
+   console.log(RensaCount);
   // 得点を計算する
   Score.calculateScore(combinationCount, eraseInfo.piece, eraseInfo.color);
   // 連鎖を計算する
@@ -75,6 +77,7 @@ function loop() {
   }
   break;
   case 'newPuyo':
+   rensaCount = 0;
   if(!Player.createNewPuyo()) {
   // 新しい操作用ぷよを作成出来なかったら、ゲームオーバー
   mode = 'gameOver';
