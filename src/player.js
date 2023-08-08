@@ -65,10 +65,12 @@ class Player {
   document.addEventListener('touchstart', (e) => {
   this.touchPoint.xs = e.touches[0].clientX
   this.touchPoint.ys = e.touches[0].clientY
-  if (e.touches.length >= 2) {e.preventDefault();}
+  //if (e.touches.length >= 2) {e.preventDefault();}
+  e.preventDefault();
   })
   document.addEventListener('touchmove', (e) => {
   // 指が少し動いた時は無視
+  e.preventDefault();
   if (Math.abs(e.touches[0].clientX - this.touchPoint.xs) < 20 &&
   Math.abs(e.touches[0].clientY - this.touchPoint.ys) < 20
   ) {
