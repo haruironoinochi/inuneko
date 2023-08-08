@@ -32,7 +32,7 @@ class Rensa {
  // 一番うしろに追加するのではなく、一番前に追加することで、スコアの並びを数字と同じようにする
  rensaElement.insertBefore(this.fontTemplateList[number].cloneNode(true), rensaElement.firstChild);
  // 10 で割って次の桁の準備をしておく
- rensa = Math.floor(score / 10);
+ rensa = Math.floor(rensa / 10);
  }
  }
  static calculateScore (rensa, piece, color) {
