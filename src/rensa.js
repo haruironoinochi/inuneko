@@ -45,7 +45,7 @@ class Rensa {
  }
  this.addRensa(scale * piece * 10);
  }
- static addRensa (score) {
+ static addRensa (rensa) {
  this.rensa += 1;
   this.showRensa();
   }
