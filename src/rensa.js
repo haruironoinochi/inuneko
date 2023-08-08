@@ -18,8 +18,8 @@ class Rensa {
  this.rensa = 0;
  this.showRensa();
  }
- static showRensa () {
- let rensa = this.rensa;
+ static showRensa (rensa) {
+ //let rensa = this.rensa;
   console.log(rensa);
  const rensaElement = Stage.rensaElement;
  // まず最初に、rensaElement の中身を空っぽにする
