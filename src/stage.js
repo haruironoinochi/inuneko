@@ -292,21 +292,3 @@ class Stage {
      Stage.fallingPuyoList = [];
      Stage.erasingPuyoInfoList = [];
     
-
-// 連鎖にともなって数字を表示する
-count += 1;
-if(count >= 2){
-  Stage.stageElement.removeChild(Stage.stageElement.lastChild); // 直近に追加したステージの要素を削除
-}
-numImage = Score.fontTemplateList[count].cloneNode(true) // 数字の画像のコピーを得る
-Stage.stageElement.appendChild(numImage); // ステージに要素を追加
-fontImage.style.position = 'absolute'; // 画像の位置を絶対座標に
-fontImage.style.left = 100 + 'px'; // 画像の横位置
-fontImage.style.top = 200 + 'px'; // 画像の縦位置
-
-// カウンターのリセット
-if(count>=1){
-  Stage.stageElement.removeChild(Stage.stageElement.lastChild); // 直近に追加したステージの要素を削除
-}
-count = 0;
-	
