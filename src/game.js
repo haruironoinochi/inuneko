@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
 let mode; // ゲームの現在の状況
 let frame; // ゲームの現在フレーム（1/60秒ごとに1追加される）
 let combinationCount = 0; // 何連鎖かどうか
-let rensaCount = 0; 
+//let rensaCount = 0;
 function initialize() {
  // 画像を準備する
  PuyoImage.initialize();
@@ -80,7 +80,6 @@ function loop() {
   break;
   case 'newPuyo':
    //rensaCount = 0;
-   Rensa.setZeroRensa();
   if(!Player.createNewPuyo()) {
   // 新しい操作用ぷよを作成出来なかったら、ゲームオーバー
   mode = 'gameOver';
