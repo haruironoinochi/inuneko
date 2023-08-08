@@ -32,9 +32,9 @@ class Stage {
  this.scoreElement = scoreElement;
 
  const rensaElement = document.getElementById("rensa");
- //rensaElement.style.backgroundColor = Config.rensaBackgroundColor;
- rensaElement.style.backgroundColor = 0 + 'px';
- rensaElement.style.top = Config.puyoImgHeight * Config.stageRows / 2 + 'px';
+ rensaElement.style.backgroundColor = Config.rensaBackgroundColor;
+ //rensaElement.style.top = Config.puyoImgHeight * Config.stageRows / 2 + 'px';
+ rensaElement.style.top = 0 + 'px';
  rensaElement.style.width = Config.puyoImgWidth * Config.stageCols + 'px';
  rensaElement.style.height = Config.fontHeight + "px";
  this.rensaElement = rensaElement;
