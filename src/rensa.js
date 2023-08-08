@@ -1,4 +1,4 @@
-class Score {
+class Rensa {
  // static fontTemplateList = [];
  // static fontLength;
  // static rensa = 0;
