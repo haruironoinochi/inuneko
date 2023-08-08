@@ -26,14 +26,14 @@ class Score {
  rensaElement.removeChild(rensaElement.firstChild);
  }
  // スコアを下の桁から埋めていく
- //for(let i = 0; i < this.fontLength; i++) {
+ for(let i = 0; i < this.fontLength; i++) {
  // 10で割ったあまりを求めて、一番下の桁を取り出す
- //const number = rensa % 10;
+ const number = rensa % 10;
  // 一番うしろに追加するのではなく、一番前に追加することで、スコアの並びを数字と同じようにする
- //scoreElement.insertBefore(this.fontTemplateList[number].cloneNode(true), scoreElement.firstChild);
- // 10 で割って次の桁の準備をしておく
- //score = Math.floor(score / 10);
- //}
+ scoreElement.insertBefore(this.fontTemplateList[number].cloneNode(true), scoreElement.firstChild);
+  10 で割って次の桁の準備をしておく
+ score = Math.floor(score / 10);
+ }
  }
  //static calculateScore (rensa, piece, color) {
  //rensa = Math.min(rensa, Score.rensaBonus.length - 1);
