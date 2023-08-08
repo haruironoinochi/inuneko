@@ -66,14 +66,14 @@ class Rensa {
  
  static addRensa (rensa) {
   this.rensa += 1;
-  this.showRensa(-1);
+  this.showrensa(-1);
  }
  
  static setZeroRensa() {
   if(this.rensa != 0){
    this.rensa = 0;
    // 表示の初期化
-   this.showRensa(-1);
+   this.showrensa(-1);
   }
  }
 }; // End of class Rensa
