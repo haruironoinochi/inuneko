@@ -15,8 +15,8 @@ class Rensa {
  this.fontTemplateList.push(fontImage);
  }
  this.fontLength = Math.floor(Config.stageCols * Config.puyoImgWidth / this.fontTemplateList[0].width);
- this.rensa = 0;
- this.showRensa();
+ //this.rensa = 0;
+ //this.showRensa();
  }
  static showRensa (rensa) {
  //let rensa = this.rensa;
