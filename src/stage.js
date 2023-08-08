@@ -31,9 +31,9 @@ class Stage {
  scoreElement.style.height = Config.fontHeight + "px";
  this.scoreElement = scoreElement;
 
-   const rensaElement = document.getElementById("rensa");
+ const rensaElement = document.getElementById("rensa");
  rensaElement.style.backgroundColor = Config.rensaBackgroundColor;
- rensaElement.style.top = Config.puyoImgHeight * Config.stageRows + 'px';
+ rensaElement.style.top = Config.puyoImgHeight * Config.stageRows / 2 + 'px';
  rensaElement.style.width = Config.puyoImgWidth * Config.stageCols + 'px';
  rensaElement.style.height = Config.fontHeight + "px";
  this.rensaElement = rensaElement;
