@@ -18,7 +18,7 @@ class Rensa {
  //this.rensa = 0;
  //this.showRensa();
  }
- static showRensa (rensa) {
+ static showrensa (rensa) {
  //let rensa = this.rensa;
   console.log(rensa);
  const rensaElement = Stage.rensaElement;
