@@ -53,7 +53,7 @@ function loop() {
   mode = 'erasing';
   combinationCount++;
    rensaCount++;
-   console.log(RensaCount);
+   console.log(rensaCount);
   // 得点を計算する
   Score.calculateScore(combinationCount, eraseInfo.piece, eraseInfo.color);
   // 連鎖を計算する
