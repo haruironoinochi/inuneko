@@ -83,7 +83,7 @@ class Player {
   gesture(xs, ys, xe, ye)
   this.touchPoint.xs = this.touchPoint.xe
   this.touchPoint.ys = this.touchPoint.ye
-  })
+  },{passive: false})
   document.addEventListener('touchend', (e) => {
   this.keyStatus.up = false
   this.keyStatus.down = false
