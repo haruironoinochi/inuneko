@@ -65,6 +65,7 @@ class Player {
   document.addEventListener('touchstart', (e) => {
   this.touchPoint.xs = e.touches[0].clientX
   this.touchPoint.ys = e.touches[0].clientY
+  if (e.touches.length >= 2) {e.preventDefault();}
   })
   document.addEventListener('touchmove', (e) => {
   // 指が少し動いた時は無視
