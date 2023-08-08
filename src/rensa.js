@@ -20,6 +20,7 @@ class Rensa {
  }
  static showRensa () {
  let rensa = this.rensa;
+  console.log(rensa);
  const rensaElement = Stage.rensaElement;
  // まず最初に、rensaElement の中身を空っぽにする
  while(rensaElement.firstChild) {
