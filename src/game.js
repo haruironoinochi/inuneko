@@ -51,6 +51,7 @@ function loop() {
   if(eraseInfo) {
   mode = 'erasing';
   combinationCount++;
+   console.log(comminationCount);
   // 得点を計算する
   Score.calculateScore(combinationCount, eraseInfo.piece, eraseInfo.color);
   // 連鎖を計算する
