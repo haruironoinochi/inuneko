@@ -52,12 +52,13 @@ function loop() {
   if(eraseInfo) {
   mode = 'erasing';
   combinationCount++;
-   rensaCount++;
-   console.log(rensaCount);
+  // rensaCount++;
+  // console.log(rensaCount);
   // 得点を計算する
   Score.calculateScore(combinationCount, eraseInfo.piece, eraseInfo.color);
   // 連鎖を計算する
-  Rensa.showrensa(rensaCount);
+  //Rensa.showrensa(rensaCount);
+  Rensa.addCound();
   Stage.hideZenkeshi();
   } else {
   if(Stage.puyoCount === 0 && combinationCount > 0) {
@@ -66,6 +67,7 @@ function loop() {
   Score.addScore(3600);
   }
   combinationCount = 0;
+  Rensa.setZeroRound();
   // 消せなかったら、新しいぷよを登場させる
   mode = 'newPuyo'
   }
