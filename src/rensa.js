@@ -39,6 +39,19 @@ class Rensa {
    rensa = Math.floor(rensa / 10);
   }
  }
+
+ static shoRensaOnStage(){
+  if(this.count >= 2){
+	  Stage.stageElement.removeChild(Stage.stageElement.lastChild); // 直近に追加したステージの要素を削除
+  }
+  numImage = Score.fontTemplateList[count].cloneNode(true) // 数字の画像のコピーを得る
+  Stage.stageElement.appendChild(numImage); // ステージに要素を追加
+  fontImage.style.position = 'absolute'; // 画像の位置を絶対座標に
+  const x = 0;
+  const y =  Config.puyoImgHeight * Config.stageRows / 2;
+  fontImage.style.left = x + 'px'; // 画像の横位置
+  fontImage.style.top = y + 'px'; // 画像の縦位置
+ }
  
  static calculateRensa (rensa, piece, color) {
   rensa = Math.min(rensa, Rensa.rensaBonus.length - 1);
