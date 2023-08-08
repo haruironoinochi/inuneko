@@ -67,7 +67,7 @@ function loop() {
   Score.addScore(3600);
   }
   combinationCount = 0;
-  Rensa.setZeroRound();
+  Rensa.setZeroRensa();
   // 消せなかったら、新しいぷよを登場させる
   mode = 'newPuyo'
   }
@@ -79,7 +79,8 @@ function loop() {
   }
   break;
   case 'newPuyo':
-   rensaCount = 0;
+   //rensaCount = 0;
+   Rensa.setZeroRensa();
   if(!Player.createNewPuyo()) {
   // 新しい操作用ぷよを作成出来なかったら、ゲームオーバー
   mode = 'gameOver';
