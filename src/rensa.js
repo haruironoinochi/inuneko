@@ -30,22 +30,22 @@ class Score {
  // 10で割ったあまりを求めて、一番下の桁を取り出す
  const number = rensa % 10;
  // 一番うしろに追加するのではなく、一番前に追加することで、スコアの並びを数字と同じようにする
- scoreElement.insertBefore(this.fontTemplateList[number].cloneNode(true), scoreElement.firstChild);
+ rensaElement.insertBefore(this.fontTemplateList[number].cloneNode(true), rensaElement.firstChild);
   10 で割って次の桁の準備をしておく
- score = Math.floor(score / 10);
+ rensa = Math.floor(score / 10);
  }
  }
  static calculateScore (rensa, piece, color) {
- rensa = Math.min(rensa, Score.rensaBonus.length - 1);
- piece = Math.min(piece, Score.pieceBonus.length - 1);
- color = Math.min(color, Score.colorBonus.length - 1);
- let scale = Score.rensaBonus[rensa] + Score.pieceBonus[piece] + Score.colorBonus[color];
+ rensa = Math.min(rensa, Rensa.rensaBonus.length - 1);
+ piece = Math.min(piece, Rensa.pieceBonus.length - 1);
+ color = Math.min(color, Rensa.colorBonus.length - 1);
+ let scale = Rensa.rensaBonus[rensa] + Rensa.pieceBonus[piece] + Rensa.colorBonus[color];
  if(scale === 0) {
  scale = 1;
  }
- this.addScore(scale * piece * 10);
+ this.addRensa(scale * piece * 10);
  }
- static addScore (score) {
+ static addRensa (score) {
  this.rensa += 1;
   this.showRensa();
   }
